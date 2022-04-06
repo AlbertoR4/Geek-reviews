@@ -19,13 +19,12 @@ body {
 
 }
 
-th {
-    color: white;
-}
 
 header {
     background-image: linear-gradient(to bottom right, rgb(33, 29, 70), rgba(52, 72, 109, 0.829));
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     flex: 0 1 auto;
 }
 
@@ -90,7 +89,6 @@ form {
     display: flex;
     flex-direction:column;
     flex-wrap: nowrap;
-    justify-content: space-between;
 }
 
 .list--items {
