@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logo_small_ico.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style/custom.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+    <title>Geek Reviews</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a  href="index.html"><img src="images/logo_small_ico.png" Logo></a>
+        </div>
+        <div>
+            
+            <nav>
+                <ul class="list">
+                    <li class="list--items"><a href="index.html">Inicio</a></li>
+                    <li class="list--items"><a href="pages/video_juegos.html">Video Juegos</a></li>
+                    <li class="list--items"><a href="pages/series.html">Series</a></li>
+                    <li class="list--items"><a href="pages/peliculas.html">Peliculas</a></li>
+                    <li class="list--items"><a href="pages/sumate_a_nuestro_equipo.html">Sumate</a></li>
+              </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="carousel" aria-label="carousel" Tabindex="0" class="section_tamaño">
+            <h1>Bienvenido a Geek Reviews</h1>
+            <p>En nuestra web vas a encontrar</p>
+            <a class="carousel__skip-link" href="#skip-link"></a>
+            <div class="slides">
+              <div class="slides-item slide-1" id="slide-1" aria-label="slide 1 of 5" tabindex="0">
+                    <p class="slide--parrafo">Reviews de <a class="slide--a" href="pages/video_juegos.html">juegos </a>actuales y reto</p>
+              </div>
+              <div class="slides-item slide-2" id="slide-2" aria-label="slide 2 of 5" tabindex="0">
+                    <p class="slide--parrafo">info de las <a class="slide--a" href="pages/series.html"> series </a>que te gustan</p>
+              </div>
+              <div class="slides-item slide-3" id="slide-3" aria-label="slide 3 of 5" tabindex="0">
+                    <p class="slide--parrafo">toda la info del<a class="slide--a" href="pages/peliculas.html"> 7mo arte</a></p>
+              </div>
+              <div class="slides-item slide-4" id="slide-4" aria-label="slide 4 of 5" tabindex="0">
+                <p class="slide--parrafo">si queres sumarte a nuestro equipo ¡¡sos mas que bienvenido!! entra<a class="slide--a" href="pages/sumate_a_nuestro_equipo.html"> ACÁ</a></p>
+              </div>      
+            </div>
+            <div class="carousel__nav">
+              <a class="slider-nav" href="#slide-1" aria-label="Go to slide 1">1</a>
+              <a class="slider-nav" href="#slide-2" aria-label="Go to slide 2">2</a>
+              <a class="slider-nav" href="#slide-3" aria-label="Go to slide 3">3</a>
+              <a class="slider-nav" href="#slide-4" aria-label="Go to slide 4">4</a>
+            </div>
+            <div class="carousel__skip-message" id="skip-link" tabindex="0"></div>
+          </section>
+    </main>
+    
+    <footer>
+        <p><b>podes encontrarnos en </b><a href="#"><i class="fab fa-facebook"></i></a> <a href="#"><i class="fab fa-instagram"></i></a> <a href="#"><i class="fab fa-twitter"></i></a></p>
+    </footer>
+</body>
+</html>
