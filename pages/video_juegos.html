@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../images/logo_small_ico.png" type="image/x-icon" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="../style/custom.css" />
     <link
     rel="stylesheet"
@@ -17,64 +18,88 @@
 </head>
 <body>
     <header>
-        <div class="logo">
-            <a href="../index.html"><img src="../images/logo_small_ico.png" Logo></a>
-        </div>
-        <div>
-            
-            <nav>
-                <ul class="list">
-                    <li class="list--items"><a href="../index.html">Inicio</a></li>
-                    <li class="list--items"><a href="../pages/video_juegos.html">Video Juegos</a></li>
-                    <li class="list--items"><a href="../pages/series.html">Series</a></li>
-                    <li class="list--items"><a href="../pages/peliculas.html">Peliculas</a></li>
-                    <li class="list--items"><a href="../pages/sumate_a_nuestro_equipo.html">Sumate</a></li>
-              </ul>
-            </nav>
-        </div>
+        <nav class="navbar navbar-expand-lg navbar-dark customNavbar-color">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="../index.html"><img src="../images/logo_small_ico.png"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../pages/video_juegos.html">Video Juegos</a></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../pages/series.html">Series</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../pages/peliculas.html">Peliculas</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../pages/sumate_a_nuestro_equipo.html">Sumate</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
     </header>
     <main>
-        <section class="section_tamaño">
-            <div class="section_position">
+        <section>
+            <div class="text-center">
                 <h1>Reseñas Videojuegos <i class="fa fa-gamepad"></i></h1>
                 <p>Las novedades o los clasicos, aqui veras una descripcion del que puede ser tu nuevo(viejo) juego preferido</p>
                 <p>selecciona el juego que te interese ver y preparate para la aventura</p>
-                <div>
-                </div>
-                <div class="accordion">
-                    <input type="checkbox" id="section1" class="accordion--input">
-                    <label for="section1" class="accordion--label">THE WITCHER 3 : WILD HUNT</label>
-                    <div class="accordion--content">
-                        <div class="games">
-                            <div>
-                                <iframe width="100%" height="315" src="https://www.youtube.com/embed/O1uQ1bcztYQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
-                            </div>
-                            <div>
-                                <p>Embarcate en la aventura de Geralt de Rivia, sumergiendote en un mundo magico, oscuro y atrapante</p>
-                            </div>
+            </div>
+            <div class="accordion" id="accordionVJ">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        THE WITCHER 3 : WILD HUNT
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionVJ">
+                    <div class="accordion-body">
+                      <div class="row col-md-12"> 
+                        <div class="col-12 col-md-5">
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/O1uQ1bcztYQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
                         </div>
+                        <div class="col-12 col-md-7">
+                            <p class="fs-2">Embarcate en la aventura de Geralt de Rivia, sumergiendote en un mundo magico, oscuro y atrapante</p>
+                        </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
-                <div class="accordion">
-                    <input type="checkbox" id="section2" class="accordion--input">
-                    <label for="section2" class="accordion--label">THE LEGEND OF ZELDA: OCARINA OF TIME</label>
-                    <div class="accordion--content">
-                        <div class="games">
-                            <div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        THE LEGEND OF ZELDA: OCARINA OF TIME
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionVJ">
+                    <div class="accordion-body">
+                        <div class="row col-md-12"> 
+                            <div class="col-12 col-md-5">
                                 <iframe width="100%" height="315" src="https://www.youtube.com/embed/_NElFLzgdUs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
                             </div>
-                            <div>
-                                <p>Un joven kokiri descubre que su destino es liberar a los Siete Sabios y salvar la tierra de Hyrule del traicionero hechicero Ganondorf.</p>
+                            <div class="col-12 col-md-7">
+                                <p class="fs-2">Un joven kokiri descubre que su destino es liberar a los Siete Sabios y salvar la tierra de Hyrule del traicionero hechicero Ganondorf.</p>
                             </div>
                         </div>
-                       
                     </div>
+                  </div>
                 </div>
-            </div>
+              </div>
         </section>
     </main>
-    <footer>
-        <p><b>podes encontrarnos en </b><a href="#"><i class="fab fa-facebook"></i></a> <a href="#"><i class="fab fa-instagram"></i></a> <a href="#"><i class="fab fa-twitter"></i></a></p>
+    <footer class="py-2">
+        <div class="container text-center">
+            <p><b>podes encontrarnos en </b><a href="#"><i class="fab fa-facebook"></i></a> <a href="#"><i class="fab fa-instagram"></i></a> <a href="#"><i class="fab fa-twitter"></i></a></p>
+        </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
