@@ -8,6 +8,14 @@
     min-height: 100%;
   }
 
+  h1, p {
+    color: white;
+  }
+
+  .video-juegos-p {
+    color: black;
+  }
+
   body {
     background: linear-gradient(-45deg, #2334d1, #364eb4, #12279c, #2232c2);
     background-size: 400% 400%;
@@ -36,13 +44,6 @@ footer {
   background-image: linear-gradient(to bottom right, rgb(33, 29, 70), rgba(52, 72, 109, 0.829));
 }
 
-p, h1 {
-  color: white;
-} 
-
-.slide-a {
-  color: yellow;
-}
 
 .slide-parrafo {
   font-weight: 600;
@@ -58,9 +59,226 @@ p, h1 {
 .imagenes-series-peliculas {
   width: 100%;
   height: auto;
+  padding: 0.5rem;
 }
 
 .customNavbar-color {
   background-image: linear-gradient(to bottom right, rgb(33, 29, 70), rgba(52, 72, 109, 0.829));
 }
 
+/*slider*/
+.carousel {
+  margin: 0 auto;
+  overflow: hidden;
+  text-align: center;
+}
+
+.slides {
+  width: 100%;
+  display: flex;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.slides::-webkit-scrollbar {
+  display: none;
+}
+
+.slides-item {
+  align-items: center;
+  border-radius: 10px;
+  display: flex;
+  flex-shrink: 0;
+  font-size: 100px;
+  height: 600px;
+  justify-content: center;
+  margin: 0 1rem;
+  position: relative;
+  scroll-snap-align: start;
+  transform: scale(1);
+  transform-origin: center center;
+  transition: transform .5s;
+  width: 100%;
+}
+
+#pelis .slides-item {
+  align-items: center;
+  border-radius: 10px;
+  display: flex;
+  flex-shrink: 0;
+  font-size: 100px;
+  height: 100%;
+  justify-content: center;
+  margin: 0 1rem;
+  position: relative;
+  scroll-snap-align: start;
+  transform: scale(1);
+  transform-origin: center center;
+  transition: transform .5s;
+  width: 100%;
+}
+
+.carousel__nav {
+  padding: 1.25rem .5rem;
+}
+
+.slider-nav {
+  align-items: center;
+  background-color: rgb(33, 29, 70);
+  border-radius: 50%;
+  color: #fff;
+  display: inline-flex;
+  height: 1.5rem;
+  justify-content: center;
+  padding: .5rem;
+  position: relative;
+  text-decoration: none;
+  width: 1.5rem;
+}
+
+.slider-nav:hover,
+.slider-nav:active {
+  background-color: #000;
+  color: #fff;
+}
+
+.slide--parrafo {
+  font-size: 3rem;
+  font-weight: 600;
+  background-color: rgb(123, 130, 170);
+
+}
+
+.slide-1 {
+background-color: black;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.slide-2 {
+  background-color: black;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.carousel__skip-link {
+height: 1px;
+overflow: hidden;
+position: absolute;
+top: auto;
+width: 1px;
+}
+
+.carousel__skip-link:focus {
+align-items: center;
+background-color: #000;
+color: #fff;
+display: flex;
+font-size: 30px;
+height: 100%;
+justify-content: center;
+opacity: .8;
+text-decoration: none;
+width: 100%;
+z-index: 1;
+}
+/**/
+
+.games {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr 1fr;
+}
+
+.series {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr 1fr;
+}
+
+.peliculas {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.peliculas p {
+  padding: 2%;
+  
+}
+
+.peliculas span {
+  color: white;
+  font-size: 30px;
+  text-decoration: underline;
+}
+
+.series--position {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+@media (min-width: 768px)  {
+  .games {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: 1fr 1fr;
+  }
+
+  .series {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: 1fr 1fr;
+  }
+
+  .peliculas {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .list {
+      display: flex;
+      flex-direction:column;
+      flex-wrap: nowrap;
+  }
+}
+
+@media (min-width: 992px) {
+  .games {
+      display: grid;
+      grid-template-columns: 45% 55%;
+      grid-template-rows: 100%;
+  }
+
+  .series {
+      display: grid;
+      grid-template-columns: 500px 1fr;
+      grid-template-rows: 100%;
+  }
+
+  .peliculas {
+      display: grid;
+      grid-template-columns: 20% 40% 40%;
+      grid-template-rows: 1fr;
+      grid-column-gap: 1rem;
+  }
+
+  .list {
+      display: flex;
+      flex-direction:row;
+      flex-wrap: nowrap;
+  }
+
+  .peliculas p {
+      padding-right: 2.5rem;
+      
+  }
+}
