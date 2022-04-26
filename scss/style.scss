@@ -1,0 +1,81 @@
+@import "reset";
+
+$nav-footer: linear-gradient(to bottom right, rgb(33, 29, 70), rgba(52, 72, 109, 0.829));
+
+$body-back: linear-gradient(-45deg, #2334d1, #364eb4, #12279c, #2232c2);
+
+html {
+    height: 100%;
+    position: relative;
+}
+
+body {
+    background: $body-back;
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100%;
+    margin-bottom: 60px;
+    
+
+    h1 {
+        color: white;
+        font-size: 50px;
+        text-decoration: underline;
+    }
+
+    p {
+        color: white;
+        font-size: 40px;
+    }
+}
+
+@keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+nav {
+    background-image: $nav-footer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex: 0 1 auto;
+    
+    ul {
+        list-style: none;
+        display: flex;
+    }
+    li {
+        margin: 1rem;
+    }
+    a {
+        text-decoration: none;
+        color: bisque;
+    }
+    
+        
+}
+
+main {
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+footer {
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    flex: 0 1 40px;
+    background-image: $nav-footer;
+        p { 
+            padding: 1rem;
+        }
+}
