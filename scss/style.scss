@@ -58,6 +58,10 @@ nav {
     a {
         text-decoration: none;
         color: bisque;
+
+        &:hover {
+            color:aqua;
+        }
     }
     
         
