@@ -55,6 +55,9 @@ nav a {
   text-decoration: none;
   color: bisque;
 }
+nav a:hover {
+  color: aqua;
+}
 
 main {
   flex: 1 1 auto;
