@@ -2,7 +2,7 @@
 
 $nav-footer: linear-gradient(to bottom right, rgb(33, 29, 70), rgba(52, 72, 109, 0.829));
 
-$body-back: linear-gradient(-45deg, #2334d1, #364eb4, #12279c, #2232c2);
+$body-back: linear-gradient(-45deg, #2334d1, #3ceaf0, #c08608, #851bc2);
 
 $back-map: (
     tamaño: 400% 400%,
@@ -11,12 +11,53 @@ $back-map: (
     Mbottom: 60px
 );
 
-h1, p {
-    color: white;
-  }
-
   .video-juegos-p {
     color: black;
+    font-size: x-large;
+}
+
+.menu-principal {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+}
+
+.button-pages {
+    border: solid 1px blue;
+    border-radius: 5px;
+    background-color: #364eb4;
+    color: white;
+    font-weight: 600;
+    padding: 4px;
+    &:hover{
+        background-color: #12279c;
+        box-shadow: 10px;
+    }
+}
+
+.fullwrap {
+    position: relative;
+  }
+
+.fullcap {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0; left: 0;
+    text-align: center;
+    font-size: large;
+    padding-top: 20%;
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em blue;
+  }
+   
+  .fullcap {
+    visibility: visible; opacity: 1;
+    transition: opacity 0.3s;
+  }
+  .fullwrap:hover .fullcap {
+    visibility: visible; opacity: 1;
   }
 
 @mixin pictures {
@@ -29,26 +70,26 @@ h1, p {
 
 @mixin grid1 {
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 100%;;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
 }
 
 @mixin grid2 {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 100%;;
+    grid-template-rows: 1fr 500px 0.5fr;
+    grid-template-columns: 1fr;
 }
 
 @mixin grid1Responsive {
     display: grid;
-    grid-template-columns: 100%;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
 }
 
 @mixin grid2Responsive {
     display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 500px 0.5fr;
 }
 
 
@@ -67,13 +108,13 @@ body {
 
     h1 {
         color: white;
-        font-size: 50px;
+        font-size: 30px;
         text-decoration: underline;
     }
 
     p {
         color: white;
-        font-size: 40px;
+        font-size: 25px;
     }
 }
 
@@ -94,26 +135,16 @@ body {
         
 }
 
-.botonE {
-    color: white;
-    border: solid 1px white;
-    border-radius: 10px;
+
+
+.botonS {
+    border: solid 1px rgb(207, 126, 72);
+    border-radius: 3px;
     text-align: center;
-    height: 60px;
     background-color: transparent;
-    padding: 1rem;
-}
-
-.botonE--blue {
-    @extend .botonE;
-    background-color: darkblue;
-    border-radius: 30px;
-}
-
-.botonE--orange {
-    @extend .botonE;
-    background-color: orangered;
-    height: 100px;
+    &:hover {
+        box-shadow: 4px 4px 8px 5px  rgb(99, 106, 109); 
+    }
 }
 
 .img-carrusel {
@@ -123,6 +154,11 @@ body {
 
 .imagenes-series-peliculas { 
     @include pictures;
+}
+
+.imagen-botonesS {
+    height: auto;
+    width: 100%;
 }
 
 .games {
@@ -148,15 +184,77 @@ body {
 }
 
 footer {
-    position: relative;
     bottom: 0;
     width: 100%;
     background-image: $nav-footer;
 }
 
+.accordion-button.collapsed {
+    background: #587AA1;
+}
+  
+.accordion-button:not(.collapsed) {
+color: #B6E7F4 ;
+background-color: #3E597A;
+box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
+}
+
+.accordion-item {
+    background-color: #B6E7F4;
+    border: 1px solidrgba(0,0,0,.125);
+}
+
 @import "carrousel";
 
 @media (min-width: 768px)  {
+
+    .fullcap {
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0; left: 0;
+        text-align: center;
+        font-size: x-large;
+        padding-top: 20%;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+      }
+       
+      .fullcap {
+        visibility: none; opacity: 0;
+        transition: opacity 0.3s;
+      }
+      .fullwrap:hover .fullcap {
+        visibility: visible; opacity: 1;
+      }
+
+    body {
+        background: $body-back;
+        background-size: map-get($back-map , tamaño);
+        animation: map-get($back-map , anima);
+        height: map-get($back-map , altura);
+        margin-bottom: map-get($back-map , Mbottom);
+        
+    
+        h1 {
+            color: white;
+            font-size: 40px;
+            text-decoration: underline;
+        }
+    
+        p {
+            color: white;
+            font-size: 30px;
+        }
+    }
+
+    .menu-principal {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+
     .games {
        @include grid1Responsive;
     }
@@ -170,7 +268,6 @@ footer {
     }
 
     footer {
-        position: relative;
         bottom: 0;
         width: 100%;
         background-image: $nav-footer;
@@ -179,6 +276,54 @@ footer {
   }
   
   @media (min-width: 992px) {
+
+    .fullcap {
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0; left: 0;
+        text-align: center;
+        font-size: x-large;
+        padding-top: 20%;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+      }
+       
+      .fullcap {
+        visibility: none; opacity: 0;
+        transition: opacity 0.3s;
+      }
+      .fullwrap:hover .fullcap {
+        visibility: visible; opacity: 1;
+      }
+
+    body {
+        background: $body-back;
+        background-size: map-get($back-map , tamaño);
+        animation: map-get($back-map , anima);
+        height: map-get($back-map , altura);
+        margin-bottom: map-get($back-map , Mbottom);
+        
+    
+        h1 {
+            color: white;
+            font-size: 40px;
+            text-decoration: underline;
+        }
+    
+        p {
+            color: white;
+            font-size: 30px;
+        }
+    }
+
+    .menu-principal {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 0.7fr;
+    }
+
     .games {
         display: grid;
         grid-template-columns: 45% 55%;
@@ -187,15 +332,17 @@ footer {
   
     .series {
         display: grid;
-        grid-template-columns: 500px 1fr;
-        grid-template-rows: 100%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-column-gap: 0.5rem;
+        grid-row-gap: 0.5rem;
     }
   
     .peliculas {
         display: grid;
         grid-template-columns: 20% 40% 40%;
         grid-template-rows: 1fr;
-        grid-column-gap: 1rem;
+        grid-column-gap: 0.5rem;
     }
 
   
@@ -205,10 +352,15 @@ footer {
     }
 
     footer {
-        position: absolute;
         bottom: 0;
         width: 100%;
         background-image: $nav-footer;
+    }
+
+    .menu-principal {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     }
   }
   

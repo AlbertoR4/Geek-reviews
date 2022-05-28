@@ -18,7 +18,7 @@
   />
     <title>Geek Reviews</title>
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark customNavbar-color">
             <div class="container-fluid">
@@ -50,24 +50,160 @@
     </header>
     <main>
         <section>
+          <div class="container text-center">
+            <h1>Series</h1>
+            <p>Aquí veras reseñas de series de distintos géneros y tiempos, entra y descubrí a la que puede ser tu nueva favorita.</p>
+          </div>
+
+          <!-- Button trigger modal -->
+          <div class="container series mb-3">
             <div class="text-center">
-                <h1>Series</h1>
-                <p>Esta semana review de gravity falls</p>
-                <!--Esto va a ser reemplazado por un modal-->
+              <p>Gravity Falls</p>
+              <button type="button" class="botonS" data-bs-toggle="modal" data-bs-target="#gravity"><img class="imagen-botonesS" src="../images/GravityFalls.jpg"></button>
             </div>
-            <div class="row col-md-12 px-2">
-                <div class="col-md-5 col-12">
-                    <img class="imagenes-series-peliculas" src="../images/Personajes.webp"/>
-                </div>
-                <div class="col-md-7 col-12 d-flex justify-content-center align-items-center">
-                    <p>No son pocos los elementos de Gravity Falls que la han convertido en una serie animada destacada. Por un lado, tiene una historia encantadora, personajes entrañables y una animación preciosa; además, es inteligente y trata a su público como tal, es muy divertida con su humor simple e hilarante que se combina con no poco humor negro y ácido; su abanico de elementos capta a los pequeños y a los adultos por igual.</p>
-                </div>
+            <div class="text-center">
+              <p>The Mandalorian</p>
+              <button type="button" class="botonS" data-bs-toggle="modal" data-bs-target="#mando"><img class="imagen-botonesS" src="../images/mando.jpg"></button>
             </div>
+            <div class="text-center">
+              <p>Better Call Saul</p>
+              <button type="button" class="botonS" data-bs-toggle="modal" data-bs-target="#saul"><img class="imagen-botonesS" src="../images/saul.jpg"></button>
+            </div>
+            <div class="text-center">
+              <p>Alf</p>
+              <button type="button" class="botonS" data-bs-toggle="modal" data-bs-target="#alien"><img class="imagen-botonesS" src="../images/alf.jpg"></button>
+            </div>
+          </div>
+          
+
+          <!-- Modal -->
+          <div class="modal fade" id="gravity" tabindex="-1" aria-labelledby="GravityFalls" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="gravity">Gravity Falls</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="col-md-12 px-2">
+                    <div class="col-md-12 col-12">
+                        <img class="imagenes-series-peliculas" src="../images/Personajes.webp"/>
+                    </div>
+                    <div class="col-md-12 col-12">
+                        <p class="fs-4 video-juegos-p">No son pocos los elementos de Gravity Falls que la han convertido en una serie animada destacada. Por un lado, tiene una historia encantadora, personajes entrañables y una animación preciosa; además, es inteligente y trata a su público como tal, es muy divertida con su humor simple e hilarante que se combina con no poco humor negro y ácido; su abanico de elementos capta a los pequeños y a los adultos por igual.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="mando" tabindex="-1" aria-labelledby="mandalorian" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="mando">The Mandalorian</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="col-md-12 px-2">
+                    <div class="col-md-12 col-12">
+                        <img class="imagenes-series-peliculas" src="../images/mando1.jpg"/>
+                    </div>
+                    <div class="col-md-12 col-12">
+                        <p class="fs-4 video-juegos-p">Una serie de aventuras y acción, un western en el Universo Star Wars.
+                          La serie recuerda muchísimo a la primera trilogía (Episodios IV, V y VI), con decorados reales, sin estar todo rodado sobre una cortina verde. Así, el producto final es muchísimo mejor que las posteriores películas.
+                          Es una autocrítica a la propia saga, que demuestra que los decorados analógicos no los podemos sustituir siempre por efectos especiales, por muchos millones de dólares invertidos.
+                          La serie es dinámica, con mucha acción y con el punto amigable que le da el personaje de baby Joda (como lo hacía el Ewok Wicket en El Retorno del Jedi), que siembra dudas en la ética de nuestro héroe, The Mandalorian, claramente cerebro izquierdo racional agresivo.
+                          Al final no era tan difícil hacerlo bien, pues la primera saga había marcado el camino. Lo difícil era hacerlo mal como ha ocurrido desde el Episodio I en adelante.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="saul" tabindex="-1" aria-labelledby="BetterCallSaul" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="saul">The Mandalorian</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="col-md-12 px-2">
+                    <div class="col-md-12 col-12">
+                        <img class="imagenes-series-peliculas" src="../images/saul1.jpg"/>
+                    </div>
+                    <div class="col-md-12 col-12">
+                        <p class="fs-4 video-juegos-p">
+                          Sin duda alguna, Better Call Saul es el perfecto "spin off" de Breaking Bad, eso sí, aún no podemos comparar a ambas, es más, creo que jamás se podrán igualar. Better Call Saul apuesta por un ritmo lento de los acontecimientos y quizás ese es su talón de Aquiles para muchos, pero de la misma forma es la esencia de la serie.
+                          En Breaking Bad, Vince Gilligan, trata las consecuencias de todos los malos actos en el pasado de manera formidable, y de la misma forma lo lleva a cabo en Better Call Saul, majestuosamente, gracias a fabulosos actores como son Bob Odenkirk, Jonathan Banks y (en mi opinión) Michael McKean.
+                          La conversión de Jimmy McGill en Saul Godman y las zancadillas que este recibe, es el principal hilo conductor de la serie, pero he de destacar la trama de Mike, que de forma paralela (aún no cruzada) y con mucho menos protagonismo, nos engancha quizás algo más que la de Saul, pues da la acción necesaria para equilibrar la serie, y además nos regala maravillosos cameos como los de la familia Salamanca. Porque ese es otro punto maravilloso de Better Call Saul, las pequeñas reseñas a Breaking Bad
+                        </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="alien" tabindex="-1" aria-labelledby="mandalorian" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="alien">Alf</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="col-md-12 px-2">
+                    <div class="col-md-12 col-12">
+                        <img class="imagenes-series-peliculas" src="../images/alf1.jpg"/>
+                    </div>
+                    <div class="col-md-12 col-12">
+                        <p class="fs-4 video-juegos-p">
+                          Es difícil creer que una serie tan limitada en la cantidad de escenarios disponibles, de espacio y situaciones para elaborar tramas, pueda ser tan excelente.
+
+                          Los Simpson tienen todo el universo para desarrollarse, y carecen totalmente de ataduras físicas.
+                          
+                          Alf no, Alf tiene la sala, el garaje, la cocina, la habitación de de Willy y Kate y alguna que otra vez el baño.
+                          
+                          Y todo únicamente en ángulos donde Alf pueda ocultar la mitad de su cuerpo, no tengo palabras para describir su excelente trabajo.
+                          Estaban limitados en todo, en absolutamente todo, y además se toman la libertad de hacer un humor blanco como la leche.
+                          
+                          Alf es un ejemplo de perfección, simplemente es una serie perfecta, las actuaciones son de muy buena calidad, en especial la de Max Wright.
+                          
+                          Y Alf simplemente concentra toda la atención, es el encargado de gatillar todas las situaciones cómicas en potencia, que una familia como los Tanner, típica y aburrida pueda generar.
+                          
+                          Alf es un personaje memorable, lleno de personalidad, al punto que el hecho de que fuera interpretado como un muñeco, jamás te hará sentir que la serie trata de tomarte el pelo. (Cosa distinta de los muppets).
+                          
+                          Si le dices a un niño pequeño que Alf no es real, no te creerá,
+                          si hipotéticamente lo llevaras al estudio, pidieras que te trajeran a los marionetistas y a quien hace la voz.
+                          El niño vera un muñeco, pero en el momento en el que empiece a hablar, el extraterrestre cobrara vida, y el pequeño vera a Alf.
+                          A este punto llega la personalidad de este personaje.
+                          
+                          Simplemente una serie memorable e inmejorable.
+                        </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
     </main>
-    <footer class="py-2">
+    <footer class="mt-auto">
         <div class="container text-center">
-            <p><b>podes encontrarnos en </b><a href="#"><i class="fab fa-facebook"></i></a> <a href="#"><i class="fab fa-instagram"></i></a> <a href="#"><i class="fab fa-twitter"></i></a></p>
+          <p>Nuestras Redes <a href="#"><i class="fab fa-facebook"></i></a> <a href="#"><i class="fab fa-instagram"></i></a> <a href="#"><i class="fab fa-twitter"></i></a></p>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

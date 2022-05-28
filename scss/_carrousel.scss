@@ -7,7 +7,7 @@
   .slides {
     width: 100%;
     display: flex;
-    overflow-x: scroll;
+    overflow-x: hidden;
     scrollbar-width: none;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
@@ -73,21 +73,21 @@
   }
   
   .slide--parrafo {
-    font-size: 3rem;
+    font-size: 1rem;
     font-weight: 600;
     background-color: rgb(123, 130, 170);
   
   }
   
   .slide-1 {
-  background-color: black;
+  background-color: #202020 ;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   }
   
   .slide-2 {
-    background-color: black;
+    background-color: #3A4A3A ;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

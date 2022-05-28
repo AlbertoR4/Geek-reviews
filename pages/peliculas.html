@@ -18,7 +18,7 @@
     />
       <title>Geek Reviews</title>
   </head>
-  <body>
+  <body class="d-flex flex-column min-vh-100">
       <header>
         <nav class="navbar navbar-expand-lg navbar-dark customNavbar-color">
           <div class="container-fluid">
@@ -50,24 +50,24 @@
       </header>
 
       <main>
-        <section class="carousel" aria-label="carousel" Tabindex="0">
+        <section class="carousel col-md-11" aria-label="carousel" Tabindex="0">
           <h1>Peliculas</h1>
-          <p><b>Info de Peliculas de todos los tiempos, desde clasicos a futuros clasicos, busca tu snack favorito y disfruta la funcion.</b></p>
+          <p><b>Información de Películas de todos los tiempos, desde clásicos a futuros clásicos, busca tu snack favorito y disfruta la función.</b></p>
           <a class="carousel__skip-link" href="#skip-link"></a>
           <div class="slides" id="pelis">
             <div class="slides-item slide-1" id="slide-peli1" tabindex="0">
                   <div class="peliculas">
                       <div>
                         <span>poster</span>
-                        <img class="imagenes-series-peliculas" src="../images/foto_0000001220211015172934.jpg">
+                        <img class="imagenes-series-peliculas pt-0" src="../images/batman.jpg">
                       </div>
                       <div>
                         <span>trailer</span>
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/FUP3P9_mqvA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe width="90%" height="315" src="https://www.youtube.com/embed/FUP3P9_mqvA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                       </div>
                       <div>
                         <span>Reseña</span>
-                        <p class="fs-3">Cuando Enigma, un sádico asesino en serie, comienza a asesinar a las principales figuras políticas de Gotham, Batman se ve obligado a investigar la corrupción oculta de la ciudad y a cuestionar la participación de su familia.</p>
+                        <p class="fs-4">Cuando Enigma, un sádico asesino en serie, comienza a asesinar a las principales figuras políticas de Gotham, Batman se ve obligado a investigar la corrupción oculta de la ciudad y a cuestionar la participación de su familia.</p>
                       </div>
                   </div>
             </div>
@@ -75,15 +75,15 @@
               <div class="peliculas">
                   <div>
                     <span>poster</span>
-                    <img class="imagenes-series-peliculas" src="../images/volverAlFuturo_.jpg">
+                    <img class="imagenes-series-peliculas pt-0" src="../images/volverAlFuturo_.jpg">
                   </div>
                   <div>
                     <span>trailer</span>
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/cRxocMphuhQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                  
+                    <iframe width="90%" height="315" src="https://www.youtube.com/embed/cRxocMphuhQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                  
                   </div>
                   <div>
                     <span>Reseña</span>
-                    <p class="fs-3">Marty McFly, un estudiante de secundaria de 17 años, es enviado accidentalmente treinta años al pasado en un DeLorean que viaja en el tiempo, inventado por su gran amigo, el excéntrico científico Doc Brown.</p>
+                    <p class="fs-4">Marty McFly, un estudiante de secundaria de 17 años, es enviado accidentalmente treinta años al pasado en un DeLorean que viaja en el tiempo, inventado por su gran amigo, el excéntrico científico Doc Brown.</p>
                   </div>
               </div>
             </div>
@@ -95,11 +95,11 @@
           <div class="carousel__skip-message" id="skip-link" tabindex="0"></div>
         </section>
       </main>
-      <footer class="py-2">
+      <footer class="mt-auto">
         <div class="container text-center">
-            <p><b>podes encontrarnos en </b><a href="#"><i class="fab fa-facebook"></i></a> <a href="#"><i class="fab fa-instagram"></i></a> <a href="#"><i class="fab fa-twitter"></i></a></p>
+          <p>Nuestras Redes <a href="#"><i class="fab fa-facebook"></i></a> <a href="#"><i class="fab fa-instagram"></i></a> <a href="#"><i class="fab fa-twitter"></i></a></p>
         </div>
-    </footer>
+    </footer >
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   </body>
 </html>
